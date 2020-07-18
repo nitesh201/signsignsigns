@@ -9,7 +9,7 @@ collections:
   - name: 'signs'
     label: 'Signs'
     format: 'json'
-    folder: '/content/signs'
+    folder: 'assets/content/signs'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
