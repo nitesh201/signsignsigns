@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^0.4.10",
+    "@nuxtjs/markdownit": "^1.2.10",
     "@vue/composition-api": "^1.0.0-beta.4",
     "nuxt": "^2.13.0"
   },
