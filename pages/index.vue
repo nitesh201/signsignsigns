@@ -24,6 +24,11 @@ export default defineComponent({
     Header,
     GalleryView,
   },
+  head() {
+    return {
+      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
+    };
+  },
   setup(props, context) {
     const signsPosts = computed(() => context.root.$store.state.signsPosts)
     const onItemSelected = (index: number) => {
