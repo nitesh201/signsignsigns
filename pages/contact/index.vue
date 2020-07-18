@@ -3,10 +3,7 @@
     <div>
       <Header />
       <div id="content">
-          <GalleryView
-              :galleryItems="signsPosts"
-              @itemSelected="onItemSelected"
-          />
+          Contact Page
       </div>
     </div>
   </div>
@@ -15,24 +12,15 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { defineComponent, ref, computed } from '@vue/composition-api';
+import { defineComponent } from '@vue/composition-api';
 import Header from '@/components/Header.vue';
-import GalleryView from '@/components/GalleryView.vue';
 
 export default defineComponent({
   components: {
     Header,
-    GalleryView,
   },
   setup(props, context) {
-    const signsPosts = computed(() => context.root.$store.state.signsPosts)
-    const onItemSelected = (index: number) => {
-      console.log(signsPosts.value[index])
-      context.root.$router.push(signsPosts.value[index].slug)
-    }
     return {
-      signsPosts,
-      onItemSelected
     };
   },
 });

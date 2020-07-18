@@ -5,9 +5,13 @@ export interface NavItem {
 
 export interface GalleryItem {
     url: string;
+    thumbnailUrl: string;
     largeUrl: string;
     smallUrl: string;
     tshirtUrl: string;
     postcardUrl: string;
+    title: string;
+    year: string;
+    artist: string;
+    body: string;
 }
-

@@ -3,7 +3,7 @@
         <div class="galleryItem"
         v-for="(galleryItem, index) in galleryItems"
         :key="index"
-        :style="`background-image: url(${galleryItem.url});`"
+        :style="`background-image: url(${galleryItem.thumbnailUrl});`"
         @click="()=>clickHandler(index)"
         >
         </div>

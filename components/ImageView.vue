@@ -1,32 +1,34 @@
 <template>
-    <div id="imageView">
-        <div id="image">
-          <img :src="image.url" />
-        </div>
-        <div id="downloadList">
-          <div id="titleCard" class="card">
-            <div id="title">LIVE LAUGH LOVE</div>
-            <div>
-              <div>Pablo Picasso</div>
-              <div>1932</div>
-              <div>Digitized</div>
-            </div>
-          </div>
-          <a class="card" @click="download(image.largeUrl, 'largePoster.pdf')">
-            <div><b>Large Poster</b> 18 x 24"</div>
-          </a>
-          <a class="card" @click="download(image.smallUrl, 'smallPoster.pdf')">
-            <div><b>Small Poster</b> 11 x 17"</div>
-          </a>
-          <a class="card" @click="download(image.tshirtUrl, 'tshirt.pdf')">
-            <div><b>T-shirt</b> 6 x 8"</div>
-          </a>
-          <a class="card" @click="download(image.postcardUrl), 'postcard.pf'">
-            <div><b>Postcard</b> 3.75 x 5"</div>
-          </a>
-        </div>
-        <div id="text"></div>
+  <div id="imageView">
+    <div id="image">
+      <img :src="image.url" />
     </div>
+    <div id="downloadList">
+      <div id="titleCard" class="card">
+        <div id="title">LIVE LAUGH LOVE</div>
+        <div>
+          <div>Pablo Picasso</div>
+          <div>1932</div>
+          <div>Digitized</div>
+        </div>
+      </div>
+      <a class="card" @click="download(image.largeUrl, 'largePoster.pdf')">
+        <div><b>Large Poster</b> 18 x 24"</div>
+      </a>
+      <a class="card" @click="download(image.smallUrl, 'smallPoster.pdf')">
+        <div><b>Small Poster</b> 11 x 17"</div>
+      </a>
+      <a class="card" @click="download(image.tshirtUrl, 'tshirt.pdf')">
+        <div><b>T-shirt</b> 6 x 8"</div>
+      </a>
+      <a class="card" @click="download(image.postcardUrl), 'postcard.pf'">
+        <div><b>Postcard</b> 3.75 x 5"</div>
+      </a>
+    </div>
+    <div id="text">
+      <div v-html="$md.render(image.body)" />
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -70,6 +72,10 @@
 .card:not(#titleCard) {
   cursor: pointer;
   justify-content: center;
+}
+#text {
+  grid-area: 1/ 11 / 2/ 17;
+  text-align: left;
 }
 </style>
 
