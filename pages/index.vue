@@ -32,7 +32,6 @@ export default defineComponent({
   setup(props, context) {
     const signsPosts = computed(() => context.root.$store.state.signsPosts)
     const onItemSelected = (index: number) => {
-      console.log(signsPosts.value[index])
       context.root.$router.push(signsPosts.value[index].slug)
     }
     return {

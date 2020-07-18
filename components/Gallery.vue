@@ -30,6 +30,7 @@
     border: 1px solid blue;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
 }
 .galleryItem:hover {
     cursor: pointer;
