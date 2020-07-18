@@ -5,11 +5,10 @@
     </div>
     <div id="downloadList">
       <div id="titleCard" class="card">
-        <div id="title">LIVE LAUGH LOVE</div>
+        <div id="title">{{image.title}}</div>
         <div>
-          <div>Pablo Picasso</div>
-          <div>1932</div>
-          <div>Digitized</div>
+          <div>{{image.artist}}</div>
+          <div>{{image.year}}</div>
         </div>
       </div>
       <a class="card" @click="download(image.largeUrl, 'largePoster.pdf')">
