@@ -5,12 +5,7 @@
       <div id="content">
           <GalleryView
               :galleryItems="signsPosts"
-              @itemSelected="(index)=>selectedIndex=index"
-              v-if="selectedIndex === null"
-          />
-          <ImageView
-              v-if="selectedIndex !== null"
-              :image="signsPosts[selectedIndex]"
+              @itemSelected="onItemSelected"
           />
       </div>
     </div>
@@ -35,12 +30,15 @@ export default defineComponent({
     const forewordText = 'We are a collective of artists and designers working both to revive past '
     + 'political graphics and to encourage new visual responses to current events. Every graphic is '
     + 'available as a free print-ready download for use in political protests or mailing campaigns.';
-    const selectedIndex = ref<number | null>(null);
     const signsPosts = computed(() => context.root.$store.state.signsPosts)
+    const onItemSelected = (index: number) => {
+      console.log(signsPosts.value[index])
+      context.root.$router.push(signsPosts.value[index].slug)
+    }
     return {
       signsPosts,
       forewordText,
-      selectedIndex,
+      onItemSelected
     };
   },
 });
@@ -57,4 +55,11 @@ export default defineComponent({
   padding-right: 40px;
   padding-left: 40px;
 }
+</style>
+
+<style scoped>
+/* #content {
+    height: calc(100vh - 200px);
+} */
+
 </style>
