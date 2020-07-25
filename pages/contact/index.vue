@@ -1,11 +1,8 @@
 <template>
   <div id="app">
-    <div>
-      <Header />
-      <div id="content">
-          Contact Page
-      </div>
-    </div>
+    <Layout>
+      Contact Page
+    </Layout>
   </div>
 </template>
 

@@ -50,12 +50,13 @@
   flex-direction: column;
 }
 #titleCard {
-  height: 150px;
+  height: 170px;
   justify-content: space-between;
 }
 #title {
   font-size: 26px;
   font-weight: bold;
+  line-height: 1;
 }
 .card {
   width: 100%;
@@ -76,6 +77,16 @@
   grid-area: 1/ 11 / 2/ 17;
   text-align: left;
   white-space: pre-line;
+  line-height: 1.3;
+  overflow: scroll;
+}
+@media screen and (max-width: 1800px){
+  #title {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1200px){
+  #imageView { display: block; }
 }
 </style>
 

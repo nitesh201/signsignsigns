@@ -1,14 +1,11 @@
 <template>
   <div id="app">
-    <div>
-      <Header />
-      <div id="content">
-          <GalleryView
-              :galleryItems="signsPosts"
-              @itemSelected="onItemSelected"
-          />
-      </div>
-    </div>
+    <Layout>
+      <GalleryView
+        :galleryItems="signsPosts"
+        @itemSelected="onItemSelected"
+      />
+    </Layout>
   </div>
 </template>
 
@@ -16,13 +13,13 @@
 <script lang="ts">
 import Vue from 'vue'
 import { defineComponent, ref, computed } from '@vue/composition-api';
-import Header from '@/components/Header.vue';
 import GalleryView from '@/components/GalleryView.vue';
+import Layout from '@/components/Layout.vue';
 
 export default defineComponent({
   components: {
-    Header,
     GalleryView,
+    Layout,
   },
   head() {
     return {
@@ -36,7 +33,7 @@ export default defineComponent({
     }
     return {
       signsPosts,
-      onItemSelected
+      onItemSelected,
     };
   },
 });
@@ -53,11 +50,4 @@ export default defineComponent({
   padding-right: 40px;
   padding-left: 40px;
 }
-</style>
-
-<style scoped>
-#content {
-    height: calc(100vh - 200px);
-}
-
 </style>

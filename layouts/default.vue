@@ -5,6 +5,11 @@
 </template>
 
 <style>
+@media screen and (max-width: 1800px) {
+  html {
+    font-size: 10px;
+  }
+}
 html {
   font-family:
     'Source Sans Pro',

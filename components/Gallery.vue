@@ -3,10 +3,15 @@
         <div class="galleryItem"
         v-for="(galleryItem, index) in galleryItems"
         :key="index"
-        :style="`background-image: url(${galleryItem.thumbnailUrl});`"
         @click="()=>clickHandler(index)"
         >
+          <div
+            class="galleryItemInner"    
+            :style="`background-image: url(${galleryItem.thumbnailUrl});`"
+          >
+          </div>
         </div>
+        <div id="galleryFooter"></div> 
     </div>
 </template>
 
@@ -25,16 +30,44 @@
     width: 0;
     height: 0;
 }
+.galleryItem::before {
+    content: ' ';
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+}
 .galleryItem {
-    padding-bottom: 100%;
-    border: 1px solid blue;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    border: 2px solid blue;
+    position: relative;
 }
 .galleryItem:hover {
     cursor: pointer;
     background-color: blue;
+}
+#galleryFooter {
+    height: 10px;
+}
+.galleryItemInner {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    bottom: 30px;
+    right: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+@media screen and (max-width: 1200px){
+  #gallery {
+    grid-template-columns: repeat(2, 1fr);
+    overflow-y:inherit;
+  }
+}
+@media screen and (max-width: 800px){
+  #gallery {
+    grid-template-columns: 1fr;
+    overflow-y:inherit;
+  }
 }
 </style>
 

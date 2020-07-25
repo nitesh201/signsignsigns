@@ -1,13 +1,8 @@
 <template>
   <div id="app">
-    <div>
-      <Header />
-      <div id="content">
-          <ImageView
-              :image="signsPost"
-          />
-      </div>
-    </div>
+    <Layout>
+      <ImageView :image="signsPost" />
+    </Layout>
   </div>
 </template>
 
@@ -37,11 +32,5 @@ export default defineComponent({
   padding-top: 40px;
   padding-right: 40px;
   padding-left: 40px;
-}
-</style>
-
-<style scoped>
-#content {
-    height: calc(100vh - 200px);
 }
 </style>

@@ -21,6 +21,13 @@
   hyphens: auto;
   font-size: 20px;
 }
+@media screen and (max-width: 1400px){
+  #foreword { font-size: 14px; }
+}
+@media screen and (max-width: 1200px){
+  #galleryView { display: block; }
+  #foreword { margin-bottom: 20px; }
+}
 </style>
 
 <script lang="ts">
