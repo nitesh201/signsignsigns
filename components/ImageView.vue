@@ -30,12 +30,7 @@
         <img :src="figure.image" style="width: 100%" />
         <div v-html="$md.render(figure.caption)" />
       </div>
-      <div v-if="image.sources">
-        <b>Sources:</b>
-        <div v-for="(source, index) in image.sources" :key="index">
-          <div v-html="$md.render(source)" />
-        </div>
-      </div>
+      <div v-if="image.sourceText" v-html="$md.render(image.sourceText)" />
     </div>
   </div>
 </template>

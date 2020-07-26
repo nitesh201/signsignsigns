@@ -25,9 +25,7 @@ collections:
             {label: Caption, name: caption, widget: markdown}
           ] 
         }
-      - { label: 'Sources', name: 'sources', widget: 'list',
-          field:  {label: Source, name: source, widget: markdown},
-        }
+      - { label: 'Source Text', name: 'sourceText', widget: 'markdown' }
       - { label: 'Large Poster', name: 'largeUrl', widget: 'file' }
       - { label: 'Small Poster', name: 'smallUrl', widget: 'file' }
       - { label: 'T-shirt', name: 'tshirtUrl', widget: 'file' }

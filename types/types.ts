@@ -20,5 +20,5 @@ export interface GalleryItem {
     artist: string;
     body: string;
     figures: Figure[];
-    sources: string[];
+    sourceText: string;
 }
