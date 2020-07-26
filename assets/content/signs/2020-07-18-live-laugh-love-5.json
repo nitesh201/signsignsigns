@@ -1,10 +1,17 @@
 {
-  "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nec dui nunc mattis enim ut tellus. Nulla at volutpat diam ut venenatis tellus in metus. Cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla. Augue eget arcu dictum varius duis. Lorem mollis aliquam ut porttitor leo a diam. Cursus mattis molestie a iaculis at. Ut tellus elementum sagittis vitae et. Mollis aliquam ut porttitor leo a diam sollicitudin. Purus viverra accumsan in nisl nisi scelerisque eu ultrices vitae. In hendrerit gravida rutrum quisque non tellus orci. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Orci nulla pellentesque dignissim enim sit. Nisl purus in mollis nunc sed. Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique.\n\nDiam quam nulla porttitor massa. Nam aliquam sem et tortor consequat id porta. Risus in hendrerit gravida rutrum quisque non. Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Est lorem ipsum dolor sit amet consectetur adipiscing elit. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Et netus et malesuada fames. Id interdum velit laoreet id donec. Lacus vestibulum sed arcu non odio euismod lacinia at quis. Aenean pharetra magna ac placerat vestibulum lectus mauris ultrices eros. Sit amet massa vitae tortor condimentum lacinia quis vel. Sit amet nisl purus in mollis nunc. Egestas maecenas pharetra convallis posuere. Lorem mollis aliquam ut porttitor. Adipiscing elit pellentesque habitant morbi tristique senectus et netus. Vulputate odio ut enim blandit volutpat maecenas volutpat blandit aliquam. Sed arcu non odio euismod lacinia at quis risus sed. Est ante in nibh mauris cursus. Vulputate sapien nec sagittis aliquam malesuada. Pellentesque dignissim enim sit amet venenatis.",
+  "body": "Alicia Garza, Patrisse Cullors, and Opal Tometi started the hashtag #blacklivesmatter in July, 2013 after a jury acquitted George Zimmerman of Trayvon Martin’s murder. According to a 2016 Guardian study, black men between the ages of 15 and 34 were nine times more likely to be killed by police officers than other Americans. And CNN reports that from 2005 to April 2017, 80 police officers involved in on-duty shootings were arrested for murder or manslaughter, and only 35% were convicted. Multiple initiatives now track incidents of police violence to bring public attention to the epidemic. Selected resources are listed here:\n\n[The Counted / The Guardian](https://www.theguardian.com/us-news/ng-interactive/2015/jun/01/the-counted-police-killings-us-database)\n\n[Killed by Police](http://killedbypolice.net/)\n\n[Mapping Police Violence](https://mappingpoliceviolence.org/)\n\n[Fatal Force / The Washington Post](https://www.washingtonpost.com/graphics/national/police-shootings-2017/)\n\n[Fatal Encounters](http://www.fatalencounters.org/)",
   "thumbnailUrl": "/img/blacklivesmatter.jpg",
   "artist": "Signsignsigns",
   "smallUrl": "/img/blacklivesmatter_11x17.pdf",
+  "sourceText": "\n\n**Sources**\n\nPark, Madison. “Police shootings: Trials, convictions are rare for officers.” *CNN*, Cable News Network, 24 June 2017.\n\nSwaine, Jon, and Ciara McCarthy. “Young black men again faced highest rate of US police killings in 2016.” *The Guardian*, Guardian News and Media, 8 Jan. 2017.\n\n​",
   "tshirtUrl": "/img/blacklivesmatter_6x8.pdf",
   "url": "/img/blacklivesmatter.jpg",
+  "figures": [
+    {
+      "image": "/img/blacklivesmatter_figure.webp",
+      "caption": "**Screenshot of December 2017 records on killedbypolice.net.**"
+    }
+  ],
   "largeUrl": "/img/blacklivesmatter_18x24.pdf",
   "title": "#BLACKLIVESMATTER",
   "year": "2018",
