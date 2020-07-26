@@ -3,6 +3,11 @@ export interface NavItem {
     url: string;
 }
 
+export interface Figure {
+    image: string;
+    caption: string;
+}
+
 export interface GalleryItem {
     url: string;
     thumbnailUrl: string;
@@ -14,4 +19,6 @@ export interface GalleryItem {
     year: string;
     artist: string;
     body: string;
+    figures: Figure[];
+    sources: string[];
 }

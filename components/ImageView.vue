@@ -26,6 +26,16 @@
     </div>
     <div id="text">
       <div v-html="$md.render(image.body)" />
+      <div v-for="figure in image.figures" :key="figure.url">
+        <img :src="figure.image" style="width: 100%" />
+        <div v-html="$md.render(figure.caption)" />
+      </div>
+      <div v-if="image.sources">
+        <b>Sources:</b>
+        <div v-for="(source, index) in image.sources" :key="index">
+          <div v-html="$md.render(source)" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -35,19 +45,20 @@
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   column-gap: 15px;
-  height: 100%;
 }
 #image {
   grid-area: 1 / 1 / 2 / 6;
-  height: 100%;
+  max-height: 100%;
 }
 #image img {
-  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
 }
 #downloadList {
   grid-area: 1/ 7/ 2/ 11;
   display: flex;
   flex-direction: column;
+  height: 80%;
 }
 #titleCard {
   height: 170px;
@@ -60,7 +71,7 @@
 }
 .card {
   width: 100%;
-  height: 75px;
+  height: 1.5vw;
   border: 2px solid blue;
   padding: 20px;
   box-sizing: border-box;
@@ -79,6 +90,7 @@
   white-space: pre-line;
   line-height: 1.3;
   overflow: scroll;
+  height: calc(100vh - 180px);
 }
 @media screen and (max-width: 1800px){
   #title {
@@ -87,6 +99,27 @@
 }
 @media screen and (max-width: 1200px){
   #imageView { display: block; }
+  #text { overflow: inherit; }
+}
+</style>
+<style>
+#text blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+#text blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+#text blockquote p {
+  display: inline;
 }
 </style>
 

@@ -5,9 +5,9 @@
 </template>
 
 <style>
-@media screen and (max-width: 1800px) {
+@media screen and (max-width: 1200px) {
   html {
-    font-size: 10px;
+    font-size: 14px !important;
   }
 }
 html {
@@ -20,7 +20,7 @@ html {
     'Helvetica Neue',
     Arial,
     sans-serif;
-  font-size: 16px;
+  font-size: 0.8vw;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
