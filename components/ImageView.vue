@@ -83,7 +83,7 @@
   grid-area: 1/ 11 / 2/ 17;
   text-align: left;
   white-space: pre-line;
-  line-height: 1.3;
+  line-height: 1.34;
   overflow: scroll;
   height: calc(100vh - 180px);
 }

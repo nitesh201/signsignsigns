@@ -20,7 +20,7 @@ html {
     'Helvetica Neue',
     Arial,
     sans-serif;
-  font-size: 0.8vw;
+  font-size: 0.9vw;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
