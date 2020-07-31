@@ -46,11 +46,11 @@ export default defineComponent({
 <style scoped>
 #close {
   position: absolute;
-  top: 35px;
-  right: 50px;
+  top: 39px;
+  right: 62px;
   cursor: pointer;
   color: white;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 #overlay {

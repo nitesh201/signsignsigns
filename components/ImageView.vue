@@ -46,11 +46,14 @@
 }
 #image {
   grid-area: 1 / 1 / 2 / 6;
-  max-height: 100%;
+  height: calc(100vh - 210px);
+  text-align: left;
 }
 #image img {
   max-height: 100%;
   max-width: 100%;
+  height: auto;
+  width: auto;
 }
 #downloadList {
   grid-area: 1/ 7/ 2/ 11;
@@ -88,7 +91,7 @@
   white-space: pre-line;
   line-height: 1.34;
   overflow: scroll;
-  height: calc(100vh - 180px);
+  height: calc(100vh - 210px);
 }
 @media screen and (max-width: 1800px){
   #title {
@@ -97,7 +100,14 @@
 }
 @media screen and (max-width: 1200px){
   #imageView { display: block; }
-  #text { overflow: inherit; }
+  #text { 
+    overflow: inherit; 
+    margin-top: 10px;
+  }
+  #image {
+    height: 100%; 
+    margin-bottom: 20px; 
+  }
 }
 </style>
 <style>

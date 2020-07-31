@@ -2,11 +2,17 @@
   <div id="galleryView">
     <div id="foreword">
       {{ forewordText }}
+      <a href="http://www.instagram.com" target="_blank" id="instagramIconWeb">
+        <img style="height: 30px;" src="../static/icons/IG.svg" />
+      </a>
     </div>
     <Gallery
       :gallery-items="galleryItems"
       @itemSelected="(index)=>$emit('itemSelected', index)"
     />
+    <a href="http://www.instagram.com" target="_blank" id="instagramIconMobile">
+      <img style="height: 30px;" src="../static/icons/IG.svg" />
+    </a>
   </div>
 </template>
 
@@ -22,13 +28,30 @@
   text-align: left;
   hyphens: auto;
   font-size: 20px;
+  position: relative;
+}
+#instagramIconWeb {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  display: initial;
+}
+#instagramIconMobile {
+  display: none;
 }
 @media screen and (max-width: 1400px){
-  #foreword { font-size: 14px; }
+  #foreword { 
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 1200px){
   #galleryView { display: block; }
   #foreword { margin-bottom: 20px; }
+  #instagramIconWeb { display: none; }
+  #instagramIconMobile { 
+    display: initial; 
+    padding-bottom: 30px;
+  }
 }
 </style>
 

@@ -57,7 +57,7 @@ a:visited {
     right: 50px;
     cursor: pointer;
   }
-  #hamburger:after { content: '='; }
+  #hamburger:after { content: '\2630'; }
 }
 </style>
 
