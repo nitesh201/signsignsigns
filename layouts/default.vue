@@ -9,7 +9,7 @@
   font-family: "Arial Narrow";
   src: url("../assets/fonts/Arial-Narrow.ttf");
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1500px) {
   html {
     font-size: 14px !important;
   }
@@ -24,7 +24,7 @@ html {
     'Helvetica Neue',
     Arial,
     sans-serif;
-  font-size: 0.9vw;
+  font-size: .9vw;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

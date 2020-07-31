@@ -32,6 +32,7 @@
         <img :src="figure.image" style="width: 100%">
         <div v-html="$md.render(figure.caption)" class="figureCaption" />
       </div>
+      <br/>
       <div v-if="image.sourceText" v-html="$md.render(image.sourceText)" id="sourceText" />
     </div>
   </div>
@@ -111,6 +112,7 @@
 }
 #text .figureCaption {
   font-family: 'Arial Narrow';
+  line-height: 1.15;
 }
 #text #sourceText {
   font-family: 'Arial Narrow';
