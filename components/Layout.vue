@@ -1,45 +1,45 @@
 <template>
-    <div>
-      <Header 
-        :navItems="navItems"
-        @toggleOverlay="() => overlayVisible = !overlayVisible"
-      />
-      <div id="content" v-if="!overlayVisible">
-          <slot></slot>
-      </div>
-      <div id="overlay" v-if="overlayVisible">
-        <span id="close" @click="() => overlayVisible = !overlayVisible">X</span>
-        <div id="navLinks">
-          <a v-for="navItem in navItems" class="navItem" :href="navItem.url" :key="navItem.text">
-            {{navItem.text}}
-          </a>
-        </div>
+  <div>
+    <Header
+      :nav-items="navItems"
+      @toggleOverlay="() => overlayVisible = !overlayVisible"
+    />
+    <div v-if="!overlayVisible" id="content">
+      <slot />
+    </div>
+    <div v-if="overlayVisible" id="overlay">
+      <span id="close" @click="() => overlayVisible = !overlayVisible">X</span>
+      <div id="navLinks">
+        <a v-for="navItem in navItems" :key="navItem.text" class="navItem" :href="navItem.url">
+          {{ navItem.text }}
+        </a>
       </div>
     </div>
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from '@vue/composition-api';
-import Header from '@/components/Header.vue';
-import {NavItem} from '@/types/types'
+import { defineComponent, ref } from '@vue/composition-api'
+import Header from '@/components/Header.vue'
+import { NavItem } from '@/types/types'
 
 export default defineComponent({
-   components: {
-       Header
-   },
-   setup() {
-        const overlayVisible = ref<Boolean>(false)
-        const navItems: NavItem[] = [
-          { text: 'Home', url: '/' },
-          { text: 'About', url: '/about' },
-          { text: 'Resources', url: '/resources' },
-          { text: 'Contact', url: '/contact' },
-        ];
-        return {
-            overlayVisible,
-            navItems
-        }
-   }
+  components: {
+    Header
+  },
+  setup () {
+    const overlayVisible = ref<Boolean>(false)
+    const navItems: NavItem[] = [
+      { text: 'Home', url: '/' },
+      { text: 'About', url: '/about' },
+      { text: 'Resources', url: '/resources' },
+      { text: 'Contact', url: '/contact' }
+    ]
+    return {
+      overlayVisible,
+      navItems
+    }
+  }
 })
 </script>
 

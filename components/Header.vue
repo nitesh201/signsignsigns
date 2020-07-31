@@ -1,15 +1,15 @@
 <template>
-    <div id="header">
-        <div id="title">
-          <a href="/">SIGNSIGNSIGNS</a>
-          <span id="hamburger" @click="toggleOverlay"></span>
-        </div>
-        <div id="navLinks">
-            <a v-for="navItem in navItems" class="navItem" :href="navItem.url" :key="navItem.text">
-                {{navItem.text}}
-            </a>
-        </div>
+  <div id="header">
+    <div id="title">
+      <a href="/">SIGNSIGNSIGNS</a>
+      <span id="hamburger" @click="toggleOverlay" />
     </div>
+    <div id="navLinks">
+      <a v-for="navItem in navItems" :key="navItem.text" class="navItem" :href="navItem.url">
+        {{ navItem.text }}
+      </a>
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -52,7 +52,7 @@ a:visited {
 }
 @media screen and (max-width: 1200px){
   #navLinks { display: none; }
-  #hamburger { 
+  #hamburger {
     position: absolute;
     right: 50px;
     cursor: pointer;
@@ -62,8 +62,8 @@ a:visited {
 </style>
 
 <script lang="ts">
-import { defineComponent, ref, PropType } from '@vue/composition-api';
-import { NavItem } from '../types/types';
+import { defineComponent, PropType } from '@vue/composition-api'
+import { NavItem } from '../types/types'
 
 export default defineComponent({
   name: 'Header',
@@ -73,13 +73,13 @@ export default defineComponent({
       default: []
     }
   },
-  setup(props, context) {
+  setup (_props, context) {
     const toggleOverlay = () => {
       context.emit('toggleOverlay')
     }
     return {
       toggleOverlay
-    };
-  },
-});
+    }
+  }
+})
 </script>

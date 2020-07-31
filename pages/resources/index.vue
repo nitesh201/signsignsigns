@@ -6,21 +6,19 @@
   </div>
 </template>
 
-
 <script lang="ts">
-import Vue from 'vue'
-import { defineComponent } from '@vue/composition-api';
-import Header from '@/components/Header.vue';
+import { defineComponent } from '@vue/composition-api'
+import Header from '@/components/Header.vue'
 
 export default defineComponent({
   components: {
-    Header,
+    Header
   },
-  setup(props, context) {
+  setup () {
     return {
-    };
-  },
-});
+    }
+  }
+})
 </script>
 
 <style>

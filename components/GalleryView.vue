@@ -1,8 +1,10 @@
 <template>
   <div id="galleryView">
-    <div id="foreword">{{forewordText}}</div>
+    <div id="foreword">
+      {{ forewordText }}
+    </div>
     <Gallery
-      :galleryItems="galleryItems"
+      :gallery-items="galleryItems"
       @itemSelected="(index)=>$emit('itemSelected', index)"
     />
   </div>
@@ -31,28 +33,28 @@
 </style>
 
 <script lang="ts">
-import { defineComponent, PropType } from '@vue/composition-api';
-import { GalleryItem } from '../types/types';
-import Gallery from './Gallery.vue';
+import { defineComponent, PropType } from '@vue/composition-api'
+import { GalleryItem } from '../types/types'
+import Gallery from './Gallery.vue'
 
 export default defineComponent({
   name: 'GalleryView',
   props: {
     galleryItems: {
       type: Array as PropType<GalleryItem[]>,
-      default: [],
-    },
+      default: []
+    }
   },
   components: {
-    Gallery,
+    Gallery
   },
-  setup() {
-    const forewordText = 'We are a collective of artists and designers working both to revive past '
-        + 'political graphics and to encourage new visual responses to current events. Every graphic is '
-        + 'available as a free print-ready download for use in political protests or mailing campaigns.';
+  setup () {
+    const forewordText = 'We are a collective of artists and designers working both to revive past ' +
+        'political graphics and to encourage new visual responses to current events. Every graphic is ' +
+        'available as a free print-ready download for use in political protests or mailing campaigns.'
     return {
-      forewordText,
-    };
-  },
-});
+      forewordText
+    }
+  }
+})
 </script>

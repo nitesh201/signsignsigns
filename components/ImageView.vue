@@ -1,14 +1,16 @@
 <template>
   <div id="imageView">
     <div id="image">
-      <img :src="image.url" />
+      <img :src="image.url">
     </div>
     <div id="downloadList">
       <div id="titleCard" class="card">
-        <div id="title">{{image.title}}</div>
+        <div id="title">
+          {{ image.title }}
+        </div>
         <div>
-          <div>{{image.artist}}</div>
-          <div>{{image.year}}</div>
+          <div>{{ image.artist }}</div>
+          <div>{{ image.year }}</div>
         </div>
       </div>
       <a class="card" @click="download(image.largeUrl, 'largePoster.pdf')">
@@ -27,10 +29,10 @@
     <div id="text">
       <div v-html="$md.render(image.body)" />
       <div v-for="figure in image.figures" :key="figure.url">
-        <img :src="figure.image" style="width: 100%" />
-        <div v-html="$md.render(figure.caption)" />
+        <img :src="figure.image" style="width: 100%">
+        <div v-html="$md.render(figure.caption)" class="figureCaption" />
       </div>
-      <div v-if="image.sourceText" v-html="$md.render(image.sourceText)" />
+      <div v-if="image.sourceText" v-html="$md.render(image.sourceText)" id="sourceText" />
     </div>
   </div>
 </template>
@@ -99,56 +101,53 @@
 </style>
 <style>
 #text blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
+  margin-top: 0px;
+  margin-left: 1.5em;
   quotes: "\201C""\201D""\2018""\2019";
 }
-#text blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
 #text blockquote p {
-  display: inline;
+  margin: 0;
+  padding: 0;
+}
+#text .figureCaption {
+  font-family: 'Arial Narrow';
+}
+#text #sourceText {
+  font-family: 'Arial Narrow';
 }
 </style>
 
 <script lang="ts">
-import { defineComponent, PropType } from '@vue/composition-api';
-import { GalleryItem } from '../types/types';
+import { defineComponent, PropType } from '@vue/composition-api'
+import { GalleryItem } from '../types/types'
 
 export default defineComponent({
   name: 'ImageView',
   props: {
     image: {
       type: Object as PropType<GalleryItem>,
-      required: true,
-    },
+      required: true
+    }
   },
-  setup() {
+  setup () {
     const toDataURL = (url: string) => {
       return fetch(url).then((response) => {
-        return response.blob();
+        return response.blob()
       }).then((blob) => {
-        return URL.createObjectURL(blob);
-      });
+        return URL.createObjectURL(blob)
+      })
     }
     const download = async (url: string, fileName: string) => {
-      const a = document.createElement("a");
-      a.href = await toDataURL(url);
-      a.download = fileName;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-    };
+      const a = document.createElement('a')
+      a.href = await toDataURL(url)
+      a.download = fileName
+      document.body.appendChild(a)
+      a.click()
+      document.body.removeChild(a)
+    }
     return {
-      download,
-    };
-  },
-});
+      download
+    }
+  }
+})
 </script>

@@ -5,6 +5,10 @@
 </template>
 
 <style>
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("../assets/fonts/Arial-Narrow.ttf");
+}
 @media screen and (max-width: 1200px) {
   html {
     font-size: 14px !important;

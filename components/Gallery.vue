@@ -1,18 +1,18 @@
 <template>
-    <div id="gallery">
-        <div class="galleryItem"
-        v-for="(galleryItem, index) in galleryItems"
-        :key="index"
-        @click="()=>clickHandler(index)"
-        >
-          <div
-            class="galleryItemInner"    
-            :style="`background-image: url(${galleryItem.thumbnailUrl});`"
-          >
-          </div>
-        </div>
-        <div id="galleryFooter"></div> 
+  <div id="gallery">
+    <div
+      v-for="(galleryItem, index) in galleryItems"
+      :key="index"
+      class="galleryItem"
+      @click="()=>clickHandler(index)"
+    >
+      <div
+        class="galleryItemInner"
+        :style="`background-image: url(${galleryItem.thumbnailUrl});`"
+      />
     </div>
+    <div id="galleryFooter" />
+  </div>
 </template>
 
 <style scoped>
@@ -72,22 +72,22 @@
 </style>
 
 <script lang="ts">
-import { defineComponent, PropType } from '@vue/composition-api';
-import { GalleryItem } from '../types/types';
+import { defineComponent, PropType } from '@vue/composition-api'
+import { GalleryItem } from '../types/types'
 
 export default defineComponent({
   name: 'Gallery',
   props: {
     galleryItems: {
       type: Array as PropType<GalleryItem[]>,
-      default: [],
-    },
+      default: []
+    }
   },
-  setup(props, context) {
-    const clickHandler = (index: number) => context.emit('itemSelected', index);
+  setup (_props, context) {
+    const clickHandler = (index: number) => context.emit('itemSelected', index)
     return {
-      clickHandler,
-    };
-  },
-});
+      clickHandler
+    }
+  }
+})
 </script>

@@ -1,21 +1,21 @@
 export const state = () => ({
-  signsPosts: [],
-});
+  signsPosts: []
+})
 
 export const mutations = {
-  setSignsPosts(state, list) {
-    state.signsPosts = list;
-  },
-};
+  setSignsPosts (state, list) {
+    state.signsPosts = list
+  }
+}
 
 export const actions = {
-  async nuxtServerInit({ commit }) {
-    let files = await require.context('~/assets/content/signs/', false, /\.json$/);
-    let signsPosts = files.keys().map(key => {
-      let res = files(key);
-      res.slug = key.slice(2, -5);
-      return res;
-    });
-    await commit('setSignsPosts', signsPosts);
-  },
-};
+  async nuxtServerInit ({ commit }) {
+    const files = await require.context('~/assets/content/signs/', false, /\.json$/)
+    const signsPosts = files.keys().map((key) => {
+      const res = files(key)
+      res.slug = key.slice(2, -5)
+      return res
+    })
+    await commit('setSignsPosts', signsPosts)
+  }
+}
