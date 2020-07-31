@@ -28,7 +28,7 @@
     </div>
     <div id="text">
       <div v-html="$md.render(image.body)" />
-      <div v-for="figure in image.figures" :key="figure.url">
+      <div v-for="figure in image.figures" :key="figure.url" class="figure">
         <img :src="figure.image" style="width: 100%">
         <div v-html="$md.render(figure.caption)" class="figureCaption" />
       </div>
@@ -46,6 +46,7 @@
 }
 #image {
   grid-area: 1 / 1 / 2 / 6;
+  min-height: 500px;
   height: calc(100vh - 210px);
   text-align: left;
 }
@@ -91,6 +92,7 @@
   white-space: pre-line;
   line-height: 1.34;
   overflow: scroll;
+  min-height: 500px;
   height: calc(100vh - 210px);
 }
 @media screen and (max-width: 1800px){
@@ -99,13 +101,23 @@
   }
 }
 @media screen and (max-width: 1200px){
+  #imageView { grid-template-rows: repeat(2, 1fr);}
+  #image { grid-area: 1/ 1/ 2/ 12; height: 100%;}
+  #downloadList { grid-area: 1/ 12/ 2/ 17; }
+  #text { 
+    grid-area: 2/ 1/ 3/ 17; 
+    overflow: inherit; 
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 800px){
   #imageView { display: block; }
   #text { 
     overflow: inherit; 
     margin-top: 10px;
   }
   #image {
-    height: 100%; 
+    height: 50%; 
     margin-bottom: 20px; 
   }
 }
@@ -123,9 +135,21 @@
 #text .figureCaption {
   font-family: 'Arial Narrow';
   line-height: 1.15;
+  width: 40%;
+  margin-left: 10px;
 }
 #text #sourceText {
   font-family: 'Arial Narrow';
+}
+#text .figure {
+  display: flex;
+}
+@media screen and (max-width: 800px){
+  #text .figure { display: block; }
+  #text .figureCaption {
+    margin-left: 0px;
+    width: initial;
+  }
 }
 </style>
 
