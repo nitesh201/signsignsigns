@@ -29,7 +29,7 @@
     <div id="text">
       <div v-html="$md.render(image.body)" />
       <div v-for="figure in image.figures" :key="figure.url" class="figure">
-        <img :src="figure.image" style="width: 100%">
+        <img :src="figure.image">
         <div v-html="$md.render(figure.caption)" class="figureCaption" />
       </div>
       <br/>
@@ -94,6 +94,10 @@
   overflow: scroll;
   min-height: 500px;
   height: calc(100vh - 210px);
+  max-width: 100%;
+}
+.figure img {
+  width: 60%;
 }
 @media screen and (max-width: 1800px){
   #title {
@@ -119,6 +123,9 @@
   #image {
     height: 50%; 
     margin-bottom: 20px; 
+  }
+  .figure img {
+    width: 100%;
   }
 }
 </style>
