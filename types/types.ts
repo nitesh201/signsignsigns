@@ -21,4 +21,5 @@ export interface GalleryItem {
     body: string;
     figures: Figure[];
     sourceText: string;
+    index: number;
 }

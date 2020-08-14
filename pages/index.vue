@@ -3,7 +3,7 @@
     <Layout>
       <GalleryView
         :gallery-items="signsPosts"
-        @itemSelected="onItemSelected"
+        @item-selected="onItemSelected"
       />
     </Layout>
   </div>

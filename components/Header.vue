@@ -54,6 +54,7 @@ a:visited {
   #navLinks { display: none; }
   #hamburger {
     position: absolute;
+    top: 40px;
     right: 50px;
     cursor: pointer;
   }

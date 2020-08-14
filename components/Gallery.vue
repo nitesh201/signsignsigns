@@ -1,7 +1,7 @@
 <template>
   <div id="gallery">
     <div
-      v-for="(galleryItem, index) in galleryItems"
+      v-for="(galleryItem, index) in sortedItems"
       :key="index"
       class="galleryItem"
       @click="()=>clickHandler(index)"
@@ -72,7 +72,7 @@
 </style>
 
 <script lang="ts">
-import { defineComponent, PropType } from '@vue/composition-api'
+import { defineComponent, PropType, computed } from '@vue/composition-api'
 import { GalleryItem } from '../types/types'
 
 export default defineComponent({
@@ -83,10 +83,16 @@ export default defineComponent({
       default: []
     }
   },
-  setup (_props, context) {
-    const clickHandler = (index: number) => context.emit('itemSelected', index)
+  setup (props, context) {
+    const clickHandler = (index: number) => context.emit('item-selected', index)
+    const sortedItems = computed(() => {
+      const sorted = [...props.galleryItems]
+      sorted.sort((a, b) => b.index - a.index)
+      return sorted
+    })
     return {
-      clickHandler
+      clickHandler,
+      sortedItems
     }
   }
 })

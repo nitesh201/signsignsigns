@@ -30,10 +30,9 @@
       <div v-html="$md.render(image.body)" />
       <div v-for="figure in image.figures" :key="figure.url" class="figure">
         <img :src="figure.image">
-        <div v-html="$md.render(figure.caption)" class="figureCaption" />
+        <div class="figureCaption" v-html="$md.render(figure.caption)" />
       </div>
-      <br/>
-      <div v-if="image.sourceText" v-html="$md.render(image.sourceText)" id="sourceText" />
+      <div v-if="image.sourceText" id="sourceText" v-html="$md.render(image.sourceText)" />
     </div>
   </div>
 </template>
@@ -108,21 +107,21 @@
   #imageView { grid-template-rows: repeat(2, 1fr);}
   #image { grid-area: 1/ 1/ 2/ 12; height: 100%;}
   #downloadList { grid-area: 1/ 12/ 2/ 17; }
-  #text { 
-    grid-area: 2/ 1/ 3/ 17; 
-    overflow: inherit; 
+  #text {
+    grid-area: 2/ 1/ 3/ 17;
+    overflow: inherit;
     margin-top: 10px;
   }
 }
 @media screen and (max-width: 800px){
   #imageView { display: block; }
-  #text { 
-    overflow: inherit; 
+  #text {
+    overflow: inherit;
     margin-top: 10px;
   }
   #image {
-    height: 50%; 
-    margin-bottom: 20px; 
+    height: 50%;
+    margin-bottom: 20px;
   }
   .figure img {
     width: 100%;
@@ -146,6 +145,7 @@
   margin-left: 10px;
 }
 #text #sourceText {
+  padding-top: 40px;
   font-family: 'Arial Narrow';
 }
 #text .figure {

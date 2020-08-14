@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Layout>
-      <p>info (at) signsignsigns (dot) com</p> 
+      <p>info (at) signsignsigns (dot) com</p>
     </Layout>
   </div>
 </template>
