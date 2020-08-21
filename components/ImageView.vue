@@ -85,6 +85,10 @@
   cursor: pointer;
   justify-content: center;
 }
+.card:not(#titleCard):hover {
+  background-color: blue;
+  color: white;
+}
 #text {
   grid-area: 1/ 11 / 2/ 17;
   text-align: left;
