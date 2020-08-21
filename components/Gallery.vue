@@ -84,7 +84,10 @@ export default defineComponent({
     }
   },
   setup (props, context) {
-    const clickHandler = (index: number) => context.emit('item-selected', index)
+    const clickHandler = (index: number) => {
+      const id = sortedItems.value[index].index;
+      context.emit('item-selected', id)
+    }
     const sortedItems = computed(() => {
       const sorted = [...props.galleryItems]
       sorted.sort((a, b) => b.index - a.index)

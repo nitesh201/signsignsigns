@@ -145,11 +145,11 @@
   margin-left: 10px;
 }
 #text #sourceText {
-  padding-top: 40px;
   font-family: 'Arial Narrow';
 }
 #text .figure {
   display: flex;
+  padding-bottom: 40px;
 }
 @media screen and (max-width: 800px){
   #text .figure { display: block; }

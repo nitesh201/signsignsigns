@@ -2,8 +2,10 @@
   <div id="app">
     <Layout>
       <div id="about">
+        <p id="title">About</p>
+        <br/>
         <p>
-          Signsignsigns is a curated collection of historical and contemporary political design.
+          SIGNSIGNSIGNS is a curated collection of historical and contemporary political design.
           The images on this site are drawn from different periods and contexts, but all remain
           alarmingly relevant today. By vectorizing graphics previously available only as low-resolution
           photographs, we hope to preserve critical works of protest art and make them accessible to new
@@ -60,9 +62,20 @@ export default defineComponent({
 
 <style scoped>
 #content {
-    height: calc(100vh - 200px);
+  height: calc(100vh - 200px);
 }
 #about {
   text-align: left;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+@media screen and (max-width: 1200px) {
+  #about {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+#title {
+  font-weight: bold;
 }
 </style>

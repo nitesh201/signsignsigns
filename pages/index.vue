@@ -13,6 +13,7 @@
 import { defineComponent, computed } from '@vue/composition-api'
 import GalleryView from '@/components/GalleryView.vue'
 import Layout from '@/components/Layout.vue'
+import { GalleryItem } from '../types/types'
 
 export default defineComponent({
   components: {
@@ -26,7 +27,13 @@ export default defineComponent({
   },
   setup (_props, context) {
     const signsPosts = computed(() => context.root.$store.state.signsPosts)
-    const onItemSelected = (index: number) => {
+    const onItemSelected = (id: number) => {
+      let index = -1;
+      signsPosts.value.forEach((x: any, idx: number) => { 
+        if (x.index == id) { 
+          index = idx
+        }
+      });
       context.root.$router.push(signsPosts.value[index].slug)
     }
     return {

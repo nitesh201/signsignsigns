@@ -8,9 +8,9 @@
     </div>
     <Gallery
       :gallery-items="galleryItems"
-      @item-selected="(index)=>$emit('item-selected', index)"
+      @item-selected="(id)=>$emit('item-selected', id)"
     />
-    <a id="instagramIconMobile" href="http://www.instagram.com" target="_blank">
+    <a id="instagramIconMobile" href="https://www.instagram.com/_signsignsigns_/" target="_blank">
       <img style="height: 30px;" src="../static/icons/IG.svg">
     </a>
   </div>

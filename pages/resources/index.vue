@@ -2,6 +2,8 @@
   <div id="app">
     <Layout>
       <div id="resources">
+      <p id="title">Resources</p>
+      <br/>
       <div class="section">
         <div class="sectionHeader">Archives</div>
         <a v-for="archive in urls.Archives" :key="archive.url" href="archive.url">
@@ -212,6 +214,8 @@ export default defineComponent({
 }
 #resources {
   text-align: left;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 a {
   display: block;
@@ -220,6 +224,15 @@ a {
   margin-bottom: 20px;
 }
 .sectionHeader {
+  font-weight: bold;
+}
+@media screen and (max-width: 1200px) {
+  #resources {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+#title {
   font-weight: bold;
 }
 </style>
