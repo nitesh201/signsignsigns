@@ -2,7 +2,7 @@
   <div id="galleryView">
     <div id="foreword">
       {{ forewordText }}
-      <a id="instagramIconWeb" href="http://www.instagram.com" target="_blank">
+      <a id="instagramIconWeb" href="https://www.instagram.com/_signsignsigns_/" target="_blank">
         <img style="height: 30px;" src="../static/icons/IG.svg">
       </a>
     </div>
