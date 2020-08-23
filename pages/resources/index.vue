@@ -195,7 +195,7 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -206,9 +206,6 @@ export default defineComponent({
   padding-right: 40px;
   padding-left: 40px;
 }
-</style>
-
-<style scoped>
 #content {
   height: calc(100vh - 200px);
 }
