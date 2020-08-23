@@ -14,16 +14,16 @@
         </div>
       </div>
       <a class="card" @click="download(image.largeUrl, 'largePoster.pdf')">
-        <div><b>Large Poster</b> 18 x 24"</div>
+        <div><b>Large Poster</b> 18 &#10005; 24"</div>
       </a>
       <a class="card" @click="download(image.smallUrl, 'smallPoster.pdf')">
-        <div><b>Small Poster</b> 11 x 17"</div>
+        <div><b>Small Poster</b> 11 &#10005; 17"</div>
       </a>
       <a class="card" @click="download(image.tshirtUrl, 'tshirt.pdf')">
-        <div><b>T-shirt</b> 6 x 8"</div>
+        <div><b>T-shirt</b> 6 &#10005; 8"</div>
       </a>
       <a class="card" @click="download(image.postcardUrl), 'postcard.pf'">
-        <div><b>Postcard</b> 3.75 x 5"</div>
+        <div><b>Postcard</b> 3.75 &#10005; 5"</div>
       </a>
     </div>
     <div id="text">
