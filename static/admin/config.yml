@@ -15,6 +15,7 @@ collections:
     editor:
       preview: false
     fields:
+      - { label: 'Draft', name: 'draft', widget: 'boolean', default: true }
       - { label: 'Sequence Number', name: 'index', widget: 'number' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Artist', name: 'artist', widget: 'string' }
