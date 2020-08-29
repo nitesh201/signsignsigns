@@ -22,4 +22,5 @@ export interface GalleryItem {
     figures: Figure[];
     sourceText: string;
     index: number;
+    draft: boolean;
 }

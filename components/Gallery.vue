@@ -91,7 +91,7 @@ export default defineComponent({
     const sortedItems = computed(() => {
       const sorted = [...props.galleryItems]
       sorted.sort((a, b) => b.index - a.index)
-      return sorted
+      return sorted.filter(item => item.draft !== true)
     })
     return {
       clickHandler,
