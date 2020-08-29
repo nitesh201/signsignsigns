@@ -2,8 +2,10 @@
   <div id="app">
     <Layout>
       <div id="about">
-        <p id="title">About</p>
-        <br/>
+        <p id="title">
+          About
+        </p>
+        <br>
         <p>
           SIGNSIGNSIGNS is a curated collection of historical and contemporary political design.
           The images on this site are drawn from different periods and contexts, but all remain

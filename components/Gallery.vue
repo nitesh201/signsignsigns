@@ -11,7 +11,9 @@
         :style="`background-image: url(${galleryItem.thumbnailUrl});`"
       />
     </div>
-    <div id="galleryFooter" />
+    <div class="galleryFooter" />
+    <div class="galleryFooter" />
+    <div class="galleryFooter" />
   </div>
 </template>
 
@@ -44,7 +46,7 @@
     cursor: pointer;
     background-color: blue;
 }
-#galleryFooter {
+.galleryFooter {
     height: 10px;
 }
 .galleryItemInner {
@@ -85,7 +87,7 @@ export default defineComponent({
   },
   setup (props, context) {
     const clickHandler = (index: number) => {
-      const id = sortedItems.value[index].index;
+      const id = sortedItems.value[index].index
       context.emit('item-selected', id)
     }
     const sortedItems = computed(() => {

@@ -2,26 +2,34 @@
   <div id="app">
     <Layout>
       <div id="resources">
-      <p id="title">Resources</p>
-      <br/>
-      <div class="section">
-        <div class="sectionHeader">Archives</div>
-        <a v-for="archive in urls.Archives" :key="archive.url" href="archive.url">
-          {{archive.text}}
-        </a>
-      </div>
-      <div class="section">
-       <div class="sectionHeader">Collectives</div> 
-        <a v-for="collective in urls.Collectives" :key="collective.url" href="collective.url">
-          {{collective.text}}
-        </a>
-      </div>
-      <div class="section">
-       <div class="sectionHeader">Publications</div> 
-        <a v-for="publication in urls.Publications" :key="publication.url" href="publication.url">
-          {{publication.text}}
-        </a>
-      </div>
+        <p id="title">
+          Resources
+        </p>
+        <br>
+        <div class="section">
+          <div class="sectionHeader">
+            Archives
+          </div>
+          <a v-for="archive in urls.Archives" :key="archive.url" href="archive.url">
+            {{ archive.text }}
+          </a>
+        </div>
+        <div class="section">
+          <div class="sectionHeader">
+            Collectives
+          </div>
+          <a v-for="collective in urls.Collectives" :key="collective.url" href="collective.url">
+            {{ collective.text }}
+          </a>
+        </div>
+        <div class="section">
+          <div class="sectionHeader">
+            Publications
+          </div>
+          <a v-for="publication in urls.Publications" :key="publication.url" href="publication.url">
+            {{ publication.text }}
+          </a>
+        </div>
       </div>
     </Layout>
   </div>
