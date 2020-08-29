@@ -21,6 +21,7 @@ export default defineComponent({
   },
   head () {
     return {
+      title: 'SIGNSIGNSIGNS',
       script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
     }
   },

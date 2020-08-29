@@ -10,7 +10,7 @@
           <div class="sectionHeader">
             Archives
           </div>
-          <a v-for="archive in urls.Archives" :key="archive.url" href="archive.url">
+          <a v-for="archive in urls.Archives" :key="archive.url" :href="archive.url">
             {{ archive.text }}
           </a>
         </div>
@@ -18,7 +18,7 @@
           <div class="sectionHeader">
             Collectives
           </div>
-          <a v-for="collective in urls.Collectives" :key="collective.url" href="collective.url">
+          <a v-for="collective in urls.Collectives" :key="collective.url" :href="collective.url">
             {{ collective.text }}
           </a>
         </div>
@@ -26,7 +26,7 @@
           <div class="sectionHeader">
             Publications
           </div>
-          <a v-for="publication in urls.Publications" :key="publication.url" href="publication.url">
+          <a v-for="publication in urls.Publications" :key="publication.url" :href="publication.url">
             {{ publication.text }}
           </a>
         </div>
