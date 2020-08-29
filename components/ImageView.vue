@@ -153,6 +153,7 @@
 }
 #text .figure {
   display: flex;
+  align-items: flex-start;
   padding-bottom: 40px;
 }
 @media screen and (max-width: 800px){
