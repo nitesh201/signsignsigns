@@ -109,7 +109,7 @@
 }
 @media screen and (max-width: 1200px){
   #imageView { grid-template-rows: repeat(2, 1fr);}
-  #image { grid-area: 1/ 1/ 2/ 12; height: 100%;}
+  #image { grid-area: 1/ 1/ 2/ 12; height: 100%; min-height: initial; }
   #downloadList { grid-area: 1/ 12/ 2/ 17; }
   #text {
     grid-area: 2/ 1/ 3/ 17;
@@ -124,7 +124,6 @@
     margin-top: 10px;
   }
   #image {
-    height: 50%;
     margin-bottom: 20px;
   }
   .figure img {
