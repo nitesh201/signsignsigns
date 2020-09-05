@@ -10,6 +10,11 @@
 import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
+  head () {
+    return {
+      title: 'SIGNSIGNSIGNS',
+    }
+  },
   async asyncData ({ params, payload }) {
     if (payload) { return { signsPost: payload } } else {
       return {

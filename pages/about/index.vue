@@ -42,6 +42,11 @@ export default defineComponent({
   components: {
     Header
   },
+  head () {
+    return {
+      title: 'SIGNSIGNSIGNS',
+    }
+  },
   setup () {
     return {
     }
